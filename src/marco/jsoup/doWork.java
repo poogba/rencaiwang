@@ -32,7 +32,7 @@ public class doWork {
 		/*人事助理地址 http://www.wlmqrc.cn/jobseek/jobtype_3108_0_2_1.aspx*/
 		/*行政助理地址 http://www.wlmqrc.cn/jobseek/jobtype_3109_0_2_1.aspx*/
 		
-		String addr = "http://www.wlmqrc.cn/jobseek/jobtype_3109_0_2_1.aspx";
+		String addr = "http://www.wlmqrc.cn/jobseek/jobtype_3108_0_2_1.aspx";
 		
 
 		workUrl wu = new workUrl();
@@ -43,11 +43,11 @@ public class doWork {
 
 		List<workInfo> list = rwu.readUrl(downLoadWorkUrl);
 
-		poiExcel.write(list, file, "行政助理");
+		poiExcel.write(list, file, "人事助理");
 
 		MailUtils cn = new MailUtils();
 
-		cn.setAddress("linuxclouds@163.com", "15099421954@163.com", "今日行政职位");
+		cn.setAddress("linuxclouds@163.com", "15099421954@163.com", "今日人事职位");
 
 		cn.setAffix(filePath, file.getName());
 

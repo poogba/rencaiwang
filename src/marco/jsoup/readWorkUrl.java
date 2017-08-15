@@ -91,7 +91,7 @@ public class readWorkUrl {
 
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				System.err.println("图片加载错误...");
 			}
 
 			workInfo workInfo = entry.getValue();
